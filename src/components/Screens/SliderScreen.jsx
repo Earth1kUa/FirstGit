@@ -1,7 +1,7 @@
 import React, { useState, createRef } from 'react';
-import { View, Text, FlatList, StyleSheet, useWindowDimensions, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Entypo } from '@expo/vector-icons';
+
 import AppIntroSlider from 'react-native-app-intro-slider';
 
 const data =
@@ -29,7 +29,7 @@ const data =
 
 const SliderScreen = ({ navigation }) => {
 
-    const goLogin = () => navigation.navigate('SignIn')
+    const goLogin = () => navigation.navigate('SignUp')
 
     const renderItem = ({ item }) => {
 
@@ -37,6 +37,7 @@ const SliderScreen = ({ navigation }) => {
             <View style={styles.slide}>
                 <View style={styles.mid}>
                     <Image style={styles.image} source={item.image} />
+
                     <Text style={styles.title}>{item.title}</Text>
                     <Text style={styles.text}>{item.text}</Text>
                 </View>
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
     image: {
         width: 200,
         height: 200,
-        marginVertical: 60,
+        marginVertical: 40,
         resizeMode: 'contain',
 
     },
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 22,
-        color: 'white',
+        color: 'purple',
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 30,
@@ -148,13 +149,13 @@ const styles = StyleSheet.create({
     rightText: {
         fontSize: 14,
         color: '#000',
-        fontFamily: 'OpenSans-SemiBold'
+
 
     },
     leftText: {
         fontSize: 14,
         color: '#000',
-        fontFamily: 'OpenSans-SemiBold'
+
 
     },
     leftBtnWrap: {

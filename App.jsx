@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import MainStack from '../reactNativeTAXI/src/components/navigation/Navigate'
+import { ActionSheetIOS, StyleSheet, Text, View } from 'react-native';
+import MainStack from './src/components/navigation/Navigate'
 
 export default function App() {
   return (
